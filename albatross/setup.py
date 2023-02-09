@@ -1,7 +1,7 @@
 import os
-import setuptools
 import warnings
 
+import setuptools
 
 dir_here = os.path.abspath(os.path.dirname(__file__))
 
@@ -11,6 +11,7 @@ install_requires = [
     "Django==4.1.3",
     "black==22.3.0",
     "dataclasses",
+    "pre-commit",
 ]
 
 
@@ -23,7 +24,9 @@ setuptools.setup(
     ],
     author="Kevin Nguyen",
     author_email="kevinnguyen.sw@gmail.com",
-    packages=setuptools.find_packages(exclude="tests",),
+    packages=setuptools.find_packages(
+        exclude="tests",
+    ),
     include_package_data=True,
     install_requires=install_requires,
 )
